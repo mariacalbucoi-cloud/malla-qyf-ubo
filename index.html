@@ -10,11 +10,24 @@
   <h1>Malla Interactiva Química y Farmacia</h1>
 
   <div class="malla" id="malla-container">
-    <!-- Los ramos serán generados por script.js -->
+    <!-- Los ramos serán generados dinámicamente por script.js -->
   </div>
 
   <footer>Espero que te sirva, te amo &lt;3</footer>
 
   <script src="script.js"></script>
+
+  <script>
+    // Crear corazones flotantes
+    for (let i = 0; i < 20; i++) {
+      const heart = document.createElement("div");
+      heart.className = "heart";
+      heart.textContent = "💖";
+      heart.style.left = Math.random() * 100 + "vw";
+      heart.style.animationDelay = Math.random() * 20 + "s";
+      heart.style.fontSize = 30 + Math.random() * 50 + "px";
+      document.body.appendChild(heart);
+    }
+  </script>
 </body>
 </html>
