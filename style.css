@@ -1,67 +1,100 @@
-/* Fondo general y tipografía */
-body {
-  background-color: #fff8dc; /* amarillo pastel */
-  font-family: "Times New Roman", Times, serif;
-  padding: 20px;
-  text-align: center;
-  position: relative;
+/* Reset básico para html y body */
+html, body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+  font-family: "Times New Roman", serif;
+  background-color: #fff8dc; /* fondo amarillo pastel */
+  color: #31708e; /* azul oscuro suave */
   overflow-x: hidden;
 }
 
-/* Título principal */
-h1 {
-  margin-bottom: 30px;
+/* Header centrado y estilizado */
+header {
+  width: 100%;
+  padding: 1.5rem 0;
+  text-align: center;
+  box-sizing: border-box;
+  margin: 0 auto;
+  background-color: #fefbd8;
 }
 
-/* Bloque por semestre */
-.semestre-bloque {
-  margin-bottom: 40px;
+header h1 {
+  margin: 0;
+  font-size: 2.7rem;
+  color: #2f4f6f;
 }
 
-.semestre-bloque h2 {
-  margin-bottom: 10px;
-  color: #4b4b4b;
-  background-color: #fce4ec; /* rosa pastel suave */
-  padding: 10px 20px;
-  border-radius: 10px;
-  display: inline-block;
-  font-size: 20px;
-}
-
-/* Contenedor de ramos */
-.malla {
+/* Contenedor principal */
+#malla-container {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  gap: 15px;
-}
-
-/* Estilo de los ramos */
-.ramo {
-  background-color: #ffd1dc; /* rojo pastel = bloqueado */
-  color: black;
-  padding: 15px;
-  border-radius: 10px;
-  font-weight: bold;
-  cursor: pointer;
-  transition: background-color 0.3s;
-  width: 220px;
-  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
-}
-
-.ramo.activo {
-  background-color: #c1f0c1; /* verde pastel = seleccionado */
-}
-
-/* Pie de página con mensaje final */
-footer {
-  font-size: 18px;
-  margin-top: 40px;
-  z-index: 2;
+  padding: 1.5rem;
+  z-index: 1;
   position: relative;
 }
 
-/* Corazones flotando */
+/* Estilo para cada semestre */
+.semestre {
+  border: 2px solid #ffe4b5;
+  padding: 1rem;
+  margin: 1rem;
+  border-radius: 10px;
+  width: 320px;
+  background-color: #fffaf0; /* tono pastel claro */
+  box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+  position: relative;
+  z-index: 1;
+}
+
+.semestre h2 {
+  margin-top: 0;
+  text-align: center;
+  color: #5a5a5a;
+}
+
+/* Cada ramo (asignatura) */
+.ramo {
+  cursor: pointer;
+  margin-bottom: 8px;
+  padding: 8px;
+  border-radius: 6px;
+  border: 1px solid #f0c987;
+  background-color: #fff0db;
+  color: #4b3832;
+  user-select: none;
+  transition: background-color 0.3s ease, border-color 0.3s ease;
+}
+
+/* Estado aprobado */
+.ramo.aprobado {
+  background-color: #c6f6c6;
+  border-color: #58c758;
+}
+
+/* Estado bloqueado */
+.ramo.bloqueado {
+  background-color: #f8d7da;
+  border-color: #f5c6cb;
+  opacity: 0.6;
+}
+
+/* Pie de página */
+footer {
+  text-align: center;
+  padding: 1rem 0;
+  color: #2f4f6f;
+  font-size: 1rem;
+  background-color: #fefbd8;
+  border-top: 1px solid #e6cfcf;
+  margin-top: 2rem;
+  z-index: 1;
+  position: relative;
+}
+
+/* Corazones flotantes */
 .heart {
   position: absolute;
   font-size: 40px;
