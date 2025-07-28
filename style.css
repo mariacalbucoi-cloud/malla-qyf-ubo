@@ -31,6 +31,8 @@ h1 {
   justify-content: center;
   padding: 2rem;
   gap: 2rem;
+  position: relative;
+  z-index: 1;
 }
 
 .semestre {
@@ -82,14 +84,18 @@ footer {
   background-color: #ffe0e9;
   color: #6a1b4d;
   font-style: italic;
+  z-index: 1;
+  position: relative;
 }
 
 /* Corazones flotantes */
 .heart {
-  position: absolute;
+  position: fixed;
   top: -50px;
-  animation: floatDown 20s linear infinite;
   z-index: 0;
+  animation: floatDown 20s linear infinite;
+  pointer-events: none;
+  opacity: 0.7;
 }
 
 @keyframes floatDown {
