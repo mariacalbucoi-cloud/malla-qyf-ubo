@@ -1,42 +1,59 @@
+/* Fondo general y tipografía */
 body {
-  background-color: yellow;
+  background-color: #fff8dc; /* amarillo pastel */
   font-family: "Times New Roman", Times, serif;
   padding: 20px;
   text-align: center;
   position: relative;
-  overflow: hidden;
+  overflow-x: hidden;
 }
 
+/* Título principal */
 h1 {
   margin-bottom: 30px;
 }
 
-.malla {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
-  gap: 15px;
-  justify-content: center;
+/* Bloque por semestre */
+.semestre-bloque {
   margin-bottom: 40px;
-  z-index: 1;
-  position: relative;
 }
 
+.semestre-bloque h2 {
+  margin-bottom: 10px;
+  color: #4b4b4b;
+  background-color: #fce4ec; /* rosa pastel suave */
+  padding: 10px 20px;
+  border-radius: 10px;
+  display: inline-block;
+  font-size: 20px;
+}
+
+/* Contenedor de ramos */
+.malla {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 15px;
+}
+
+/* Estilo de los ramos */
 .ramo {
-  background-color: lightcoral; /* Rojo = bloqueado */
+  background-color: #ffd1dc; /* rojo pastel = bloqueado */
   color: black;
   padding: 15px;
   border-radius: 10px;
   font-weight: bold;
   cursor: pointer;
   transition: background-color 0.3s;
-  z-index: 2;
-  position: relative;
+  width: 220px;
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
 }
 
 .ramo.activo {
-  background-color: lightgreen; /* Verde = desbloqueado y seleccionado */
+  background-color: #c1f0c1; /* verde pastel = seleccionado */
 }
 
+/* Pie de página con mensaje final */
 footer {
   font-size: 18px;
   margin-top: 40px;
@@ -44,11 +61,11 @@ footer {
   position: relative;
 }
 
-/* Corazones animados */
+/* Corazones flotando */
 .heart {
   position: absolute;
   font-size: 40px;
-  opacity: 0.2;
+  opacity: 0.15;
   animation: float 20s linear infinite;
   pointer-events: none;
   z-index: 0;
